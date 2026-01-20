@@ -2,11 +2,8 @@
 title: "site"
 ---
 
-This is a Quarto website.
+# This is a Header!
 
-To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
-
-## header
 
 * thing
 * thing 2
