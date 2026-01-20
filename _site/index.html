@@ -20,6 +20,41 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -69,6 +104,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="styles.css">
 </head>
@@ -114,7 +178,16 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#this-is-a-header" id="toc-this-is-a-header" class="nav-link active" data-scroll-target="#this-is-a-header">This is a Header!</a></li>
+  <li><a href="#this-is-a-header" id="toc-this-is-a-header" class="nav-link active" data-scroll-target="#this-is-a-header">This is a Header!</a>
+  <ul class="collapse">
+  <li><a href="#this-is-a-header-1" id="toc-this-is-a-header-1" class="nav-link" data-scroll-target="#this-is-a-header-1">This is a Header!</a>
+  <ul class="collapse">
+  <li><a href="#this-is-a-header-2" id="toc-this-is-a-header-2" class="nav-link" data-scroll-target="#this-is-a-header-2">This is a Header!</a></li>
+  <li><a href="#tables" id="toc-tables" class="nav-link" data-scroll-target="#tables">Tables</a></li>
+  </ul></li>
+  <li><a href="#subscripts" id="toc-subscripts" class="nav-link" data-scroll-target="#subscripts">Subscripts</a></li>
+  <li><a href="#fractions" id="toc-fractions" class="nav-link" data-scroll-target="#fractions">Fractions</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -142,13 +215,61 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="this-is-a-header" class="level1">
 <h1>This is a Header!</h1>
-<ul>
+<section id="this-is-a-header-1" class="level2">
+<h2 class="anchored" data-anchor-id="this-is-a-header-1">This is a Header!</h2>
+<section id="this-is-a-header-2" class="level3">
+<h3 class="anchored" data-anchor-id="this-is-a-header-2">This is a Header!</h3>
+<section id="this-is-a-header-3" class="level4">
+<h4 class="anchored" data-anchor-id="this-is-a-header-3">This is a Header!</h4>
+<p>Text</p>
+<p><em>text</em></p>
+<p><strong>bold</strong></p>
+<ol type="1">
 <li>thing</li>
 <li>thing 2</li>
 <li>thing 3</li>
-</ul>
+</ol>
+<p><a href="https://corey4man.github.io/Jan206100/">My Link</a></p>
+<p>![]</p>
+</section>
+</section>
+<section id="tables" class="level3">
+<h3 class="anchored" data-anchor-id="tables">Tables</h3>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>First Header</th>
+<th>Second Header</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Content cell</td>
+<td>Content cell</td>
+</tr>
+</tbody>
+</table>
+<p><span class="math inline">\(y = a + b\)</span></p>
+</section>
+</section>
+<section id="subscripts" class="level2">
+<h2 class="anchored" data-anchor-id="subscripts">Subscripts</h2>
+<p><span class="math inline">\(H_0 = Z_{a + b}\)</span></p>
+<p><span class="math inline">\(S = cA^{z-t}\)</span></p>
+</section>
+<section id="fractions" class="level2">
+<h2 class="anchored" data-anchor-id="fractions">Fractions</h2>
+<p><span class="math inline">\(\alpha = \frac{\beta}{\delta}\)</span></p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="fu">rnorm</span>(<span class="at">n=</span><span class="dv">10</span>, <span class="at">mean=</span><span class="dv">10</span>, <span class="at">sd=</span><span class="dv">2</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code> [1] 13.696901 14.569220  7.132652 14.003791 12.124426 11.802332 10.714906
+ [8]  9.237448  9.143449 10.964265</code></pre>
+</div>
+</div>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->

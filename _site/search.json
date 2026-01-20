@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "site",
     "section": "",
-    "text": "This is a Header!\n\nthing\nthing 2\nthing 3"
+    "text": "Text\ntext\nbold\n\nthing\nthing 2\nthing 3\n\nMy Link\n![]\n\n\n\n\n\n\n\nFirst Header\nSecond Header\n\n\n\n\nContent cell\nContent cell\n\n\n\n\\(y = a + b\\)\n\n\n\n\n\\(H_0 = Z_{a + b}\\)\n\\(S = cA^{z-t}\\)\n\n\n\n\\(\\alpha = \\frac{\\beta}{\\delta}\\)\n\nprint(rnorm(n=10, mean=10, sd=2))\n\n [1] 13.696901 14.569220  7.132652 14.003791 12.124426 11.802332 10.714906\n [8]  9.237448  9.143449 10.964265"
   },
   {
     "objectID": "index.html#header",
@@ -19,5 +19,26 @@
     "title": "About",
     "section": "",
     "text": "About this site"
+  },
+  {
+    "objectID": "index.html#this-is-a-header-1",
+    "href": "index.html#this-is-a-header-1",
+    "title": "site",
+    "section": "",
+    "text": "Text\ntext\nbold\n\nthing\nthing 2\nthing 3\n\nMy Link\n![]\n\n\n\n\n\n\n\nFirst Header\nSecond Header\n\n\n\n\nContent cell\nContent cell\n\n\n\n\\(y = a + b\\)"
+  },
+  {
+    "objectID": "index.html#subscripts",
+    "href": "index.html#subscripts",
+    "title": "site",
+    "section": "",
+    "text": "\\(H_0 = Z_{a + b}\\)\n\\(S = cA^{z-t}\\)"
+  },
+  {
+    "objectID": "index.html#fractions",
+    "href": "index.html#fractions",
+    "title": "site",
+    "section": "",
+    "text": "\\(\\alpha = \\frac{\\beta}{\\delta}\\)\n\nprint(rnorm(n=10, mean=10, sd=2))\n\n [1] 13.696901 14.569220  7.132652 14.003791 12.124426 11.802332 10.714906\n [8]  9.237448  9.143449 10.964265"
   }
 ]
