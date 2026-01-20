@@ -1,0 +1,53 @@
+---
+title: "site"
+---
+
+# This is a Header!
+## This is a Header!
+### This is a Header!
+#### This is a Header!
+
+Text
+
+*text*
+
+**bold**
+
+1. thing
+1. thing 2
+1. thing 3
+
+[My Link](https://corey4man.github.io/Jan206100/)
+
+![]
+
+
+### Tables
+
+
+First Header | Second Header
+-------------|--------------
+Content cell | Content cell
+
+
+$y = a + b$
+
+
+## Subscripts
+
+$H_0 = Z_{a + b}$
+
+$S = cA^{z-t}$
+
+## Fractions
+
+$\alpha = \frac{\beta}{\delta}$
+
+```{r}
+print(rnorm(n=10, mean=10, sd=2))
+```
+
+```{python, echo=TRUE}
+for i in range(3):
+    print(i)
+```
