@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "site",
     "section": "",
-    "text": "Text\ntext\nbold\n\nthing\nthing 2\nthing 3\n\nMy Link\n![]\n\n\n\n\n\n\n\nFirst Header\nSecond Header\n\n\n\n\nContent cell\nContent cell\n\n\n\n\\(y = a + b\\)\n\n\n\n\n\\(H_0 = Z_{a + b}\\)\n\\(S = cA^{z-t}\\)\n\n\n\n\\(\\alpha = \\frac{\\beta}{\\delta}\\)\n\nprint(rnorm(n=10, mean=10, sd=2))\n\n [1] 10.518550 10.740612 10.109612 11.618108  8.955031  8.085066  6.277242\n [8] 12.076129 11.000972 12.789619\n\n\n\nfor i in range(3):\n    print(i)\n\n0\n1\n2"
+    "text": "Text\ntext\nbold\n\nthing\nthing 2\nthing 3\n\nMy Link\n![]\n\n\n\n\n\n\n\nFirst Header\nSecond Header\n\n\n\n\nContent cell\nContent cell\n\n\n\n\\(y = a + b\\)\n\n\n\n\n\\(H_0 = Z_{a + b}\\)\n\\(S = cA^{z-t}\\)\n\n\n\n\\(\\alpha = \\frac{\\beta}{\\delta}\\)\n\nprint(rnorm(n=10, mean=10, sd=2))\n\n [1]  9.151994 12.768507  9.779484  8.315554 10.864170  8.708751 10.386899\n [8] 13.710395 10.372621 10.533014\n\n\n\nfor i in range(3):\n    print(i)\n\n0\n1\n2"
   },
   {
     "objectID": "index.html#this-is-a-header-1",
@@ -25,7 +25,7 @@
     "href": "index.html#fractions",
     "title": "site",
     "section": "",
-    "text": "\\(\\alpha = \\frac{\\beta}{\\delta}\\)\n\nprint(rnorm(n=10, mean=10, sd=2))\n\n [1] 10.518550 10.740612 10.109612 11.618108  8.955031  8.085066  6.277242\n [8] 12.076129 11.000972 12.789619\n\n\n\nfor i in range(3):\n    print(i)\n\n0\n1\n2"
+    "text": "\\(\\alpha = \\frac{\\beta}{\\delta}\\)\n\nprint(rnorm(n=10, mean=10, sd=2))\n\n [1]  9.151994 12.768507  9.779484  8.315554 10.864170  8.708751 10.386899\n [8] 13.710395 10.372621 10.533014\n\n\n\nfor i in range(3):\n    print(i)\n\n0\n1\n2"
   },
   {
     "objectID": "about.html",
